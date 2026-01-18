@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production --base-href /TekraDeveloper_BPMN_STUDIO/",
+    "deploy": "ng deploy --base-href=/TekraDeveloper_BPMN_STUDIO/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "playwright test"
@@ -37,6 +39,7 @@
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.8",
     "@types/node": "^24.0.0",
+    "angular-cli-ghpages": "^3.0.2",
     "angular-eslint": "21.0.1",
     "eslint": "^9.39.1",
     "jasmine-core": "~4.6.0",
