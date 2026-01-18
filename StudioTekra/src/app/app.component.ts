@@ -1,0 +1,34 @@
+import { Component } from '@angular/core';
+import type { ImportDoneEvent } from 'bpmn-js/lib/BaseViewer';
+import { DiagramComponent } from './diagram/diagram.component';
+
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [DiagramComponent],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'bpmn-js-angular';
+  diagramUrl = 'assets/diagram.bpmn';
+  importError?: Error;
+
+  handleImported(event: ImportDoneEvent) {
+
+    const {
+      error,
+      warnings
+    } = event;
+
+    if (!error) {
+      console.log(`Rendered diagram (%s warnings)`, warnings.length);
+    } else {
+      console.error('Failed to render diagram', error);
+    }
+
+    this.importError = error;
+  }
+
+}

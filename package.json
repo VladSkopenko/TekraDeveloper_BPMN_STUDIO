@@ -1,0 +1,30 @@
+{
+  "name": "bpmn-js-example-angular",
+  "version": "0.0.0",
+  "description": "An example how to integrate bpmn-js with an Angular application",
+  "scripts": {
+    "all": "run-s lint build test e2e",
+    "build": "npm run build -w StudioTekra",
+    "dev": "npm run start",
+    "e2e": "npm run e2e -w StudioTekra",
+    "lint": "npm run lint -w StudioTekra",
+    "start": "npm run start -w StudioTekra",
+    "test": "npm test -w StudioTekra -- --watch=false --no-progress --browsers=ChromeHeadless"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpmn-io/bpmn-js-example-angular.git"
+  },
+  "keywords": [
+    "Angular",
+    "bpmn-js",
+    "example"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "npm-run-all2": "^8.0.0"
+  },
+  "workspaces": [
+    "StudioTekra"
+  ]
+}

@@ -1,0 +1,29 @@
+<h1>TEKRA PRODUCTION </h1>
+
+<p>
+  Studio for creating robotic processes.
+</p>
+<p>
+  Content bloc №0
+</p>
+
+<div class="diagram-parent">
+  <app-diagram [url]="diagramUrl" (importDone)="handleImported($event)"></app-diagram>
+
+  @if (importError) {
+    <div class="import-error">
+      <strong>Failed to render diagram: </strong>
+      {{ importError.message }}
+    </div>
+  }
+</div>
+
+<p>
+  Тут контент блок №1
+</p>
+<p>
+  Контент блок №2
+</p>
+<p>
+  Контент номер №3 
+</p>
